@@ -68,7 +68,7 @@ namespace API.Service.Concrete
                 var totalPosts = await _repository.AllPostCount();
                 var postIds = posts.Select(s => s.Id).ToArray();
                 var comments = await _commentService.GetAllComments(postIds, (commentPage - 1) * 5, 5);
-                var totalComments = await _commentService.GetCommentCount(postIds);
+              
                 var votes = await _voteService.GetVote(comments.Select(s => s.Id).ToArray());
 
                 return new PostsWithCommentsAndVotesModel
@@ -78,10 +78,10 @@ namespace API.Service.Concrete
                     {
                         PostData = s.Post,
                         PostedDate = s.InsertedOn,
-                        TotalComment = totalComments,
+                        TotalComment =  _commentService.GetCommentCount(s.Id).Result,
                         PostId = s.Id,
                         UserName = s.InsertedBy.ToString(),
-                        Comments = comments.Select(c => new Comment
+                        Comments = comments.Where(w=>w.PostId==s.Id).Select(c => new Comment
                         {
                             CommentData = c.Comment,
                             CommentId = c.Id,

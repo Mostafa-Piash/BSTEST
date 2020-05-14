@@ -14,6 +14,6 @@ namespace API.Repository.Abstract
         Task<Comments> UpdateComment(Comments comment);
         Task<bool> RemoveComment(Comments comment);
         Task<IEnumerable<Comments>> GetAllComments(int[] postId, int index, int count);
-        Task<int> GetCommentCount(int[] postIds);
+        Task<int> GetCommentCount(int postId);
     }
 }

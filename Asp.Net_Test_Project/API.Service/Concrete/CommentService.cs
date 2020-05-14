@@ -67,11 +67,11 @@ namespace API.Service.Concrete
             }
         }
 
-        public async Task<int> GetCommentCount(int[] postIds)
+        public async Task<int> GetCommentCount(int postId)
         {
             try
             {
-                return await _repository.GetCommentCount(postIds);
+                return await _repository.GetCommentCount(postId);
             }
             catch (Exception ex)
             {
