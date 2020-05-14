@@ -75,6 +75,19 @@ namespace API.Repository.Concrete
             }
         }
 
+        public async Task<int> GetCommentCount(int[] postIds)
+        {
+            try
+            {
+                var res = await _context.Comments.Where(w => postIds.Contains(w.PostId)).CountAsync();
+                return res;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
         public async Task<bool> RemoveComment(Comments comment)
         {
             try

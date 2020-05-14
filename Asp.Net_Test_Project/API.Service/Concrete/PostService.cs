@@ -62,34 +62,45 @@ namespace API.Service.Concrete
 
         public async Task<PostsWithCommentsAndVotesModel> GetPostWithCommentsAndVotes(int postPage, int commentPage)
         {
-            var posts = await _repository.GetAllPosts((postPage - 1) * 20, 20);
-            var comments = await _commentService.GetAllComments(posts.Select(s => s.Id).ToArray(), (commentPage - 1) * 5, 5);
-            var votes = await _voteService.GetVote(comments.Select(s => s.Id).ToArray());
-
-
-            return new PostsWithCommentsAndVotesModel
+            try
             {
-                TotalPost = posts.Count(), // this is not the proper  count but I ran out of time sorry for that
-                Posts = posts.Select(s => new Post
+                var posts = await _repository.GetAllPosts((postPage - 1) * 20, 20);
+                var totalPosts = await _repository.AllPostCount();
+                var postIds = posts.Select(s => s.Id).ToArray();
+                var comments = await _commentService.GetAllComments(postIds, (commentPage - 1) * 5, 5);
+                var totalComments = await _commentService.GetCommentCount(postIds);
+                var votes = await _voteService.GetVote(comments.Select(s => s.Id).ToArray());
+
+
+                return new PostsWithCommentsAndVotesModel
                 {
-                    PostData = s.Post,
-                    PostedDate = s.InsertedOn,
-                    TotalComment = comments.Count(), // this is not the proper count but I ran out of time  sorry for that
-                    PostId = s.Id,
-                    UserName = s.InsertedBy.ToString(),
-                    Comments = comments.Select(c => new Comment
+                    TotalPost = totalPosts,
+                    Posts = posts.Select(s => new Post
                     {
-                        CommentData = c.Comment,
-                        CommentId = c.Id,
-                        PostedDate = c.InsertedOn,
-                        UpVotes = votes.Where(w => w.IsUpVoted).ToArray().Count(),
-                        DownVotes = votes.Where(w => !w.IsUpVoted).ToArray().Count(),
-                        UserName = c.InsertedBy.ToString()
+                        PostData = s.Post,
+                        PostedDate = s.InsertedOn,
+                        TotalComment = totalComments,
+                        PostId = s.Id,
+                        UserName = s.InsertedBy.ToString(),
+                        Comments = comments.Select(c => new Comment
+                        {
+                            CommentData = c.Comment,
+                            CommentId = c.Id,
+                            PostedDate = c.InsertedOn,
+                            UpVotes = votes.Where(w => w.IsUpVoted && w.CommentId==c.Id).ToArray().Count(),
+                            DownVotes = votes.Where(w => !w.IsUpVoted && w.CommentId == c.Id).ToArray().Count(),
+                            UserName = c.InsertedBy.ToString()
+                        }).ToList()
+
                     }).ToList()
 
-                }).ToList()
+                };
+            }
+            catch (Exception ex)
+            {
 
-            };
+                throw ex;
+            }
 
 
 

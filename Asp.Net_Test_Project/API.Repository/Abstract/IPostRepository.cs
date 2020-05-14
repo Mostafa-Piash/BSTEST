@@ -14,5 +14,6 @@ namespace API.Repository.Abstract
         Task<Posts> UpdatePost(Posts post);
         Task<bool> RemovePost(Posts post);
         Task<IEnumerable<Posts>> GetAllPosts(int index,int count);
+        Task<int> AllPostCount();
     }
 }

@@ -14,6 +14,7 @@ namespace API.Service.Abstract
         Task<Comments> UpdateComment(Comments comment);
         Task<bool> RemoveComment(Comments comment);
         Task<IEnumerable<Comments>> GetAllComments(int[] postId, int index, int count);
+        Task<int> GetCommentCount(int[] postId);
 
     }
 }

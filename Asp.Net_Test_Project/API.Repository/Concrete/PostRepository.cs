@@ -33,6 +33,20 @@ namespace API.Repository.Concrete
             }
         }
 
+        public async Task<int> AllPostCount()
+        {
+            try
+            {
+                var res = await _context.Posts.CountAsync();
+                return res;
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
+
         public async Task<IEnumerable<Posts>> GetAllPosts()
         {
             try
