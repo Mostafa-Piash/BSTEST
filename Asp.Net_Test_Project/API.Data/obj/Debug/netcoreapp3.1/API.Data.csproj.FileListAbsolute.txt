@@ -1,0 +1,9 @@
+G:\BrainStation\Asp.Net_Test_Project\API.Data\bin\Debug\netcoreapp3.1\API.Data.deps.json
+G:\BrainStation\Asp.Net_Test_Project\API.Data\bin\Debug\netcoreapp3.1\API.Data.dll
+G:\BrainStation\Asp.Net_Test_Project\API.Data\bin\Debug\netcoreapp3.1\API.Data.pdb
+G:\BrainStation\Asp.Net_Test_Project\API.Data\obj\Debug\netcoreapp3.1\API.Data.csproj.CoreCompileInputs.cache
+G:\BrainStation\Asp.Net_Test_Project\API.Data\obj\Debug\netcoreapp3.1\API.Data.AssemblyInfoInputs.cache
+G:\BrainStation\Asp.Net_Test_Project\API.Data\obj\Debug\netcoreapp3.1\API.Data.AssemblyInfo.cs
+G:\BrainStation\Asp.Net_Test_Project\API.Data\obj\Debug\netcoreapp3.1\API.Data.dll
+G:\BrainStation\Asp.Net_Test_Project\API.Data\obj\Debug\netcoreapp3.1\API.Data.pdb
+G:\BrainStation\Asp.Net_Test_Project\API.Data\obj\Debug\netcoreapp3.1\API.Data.csprojAssemblyReference.cache

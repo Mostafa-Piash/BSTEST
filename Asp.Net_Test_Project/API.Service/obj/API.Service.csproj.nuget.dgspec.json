@@ -1,0 +1,194 @@
+{
+  "format": 1,
+  "restore": {
+    "G:\\BrainStation\\Asp.Net_Test_Project\\API.Service\\API.Service.csproj": {}
+  },
+  "projects": {
+    "G:\\BrainStation\\Asp.Net_Test_Project\\API.Data\\API.Data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "G:\\BrainStation\\Asp.Net_Test_Project\\API.Data\\API.Data.csproj",
+        "projectName": "API.Data",
+        "projectPath": "G:\\BrainStation\\Asp.Net_Test_Project\\API.Data\\API.Data.csproj",
+        "packagesPath": "C:\\Users\\Piash\\.nuget\\packages\\",
+        "outputPath": "G:\\BrainStation\\Asp.Net_Test_Project\\API.Data\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Piash\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.Relational": {
+              "target": "Package",
+              "version": "[3.1.4, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "G:\\BrainStation\\Asp.Net_Test_Project\\API.Repository\\API.Repository.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "G:\\BrainStation\\Asp.Net_Test_Project\\API.Repository\\API.Repository.csproj",
+        "projectName": "API.Repository",
+        "projectPath": "G:\\BrainStation\\Asp.Net_Test_Project\\API.Repository\\API.Repository.csproj",
+        "packagesPath": "C:\\Users\\Piash\\.nuget\\packages\\",
+        "outputPath": "G:\\BrainStation\\Asp.Net_Test_Project\\API.Repository\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Piash\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "G:\\BrainStation\\Asp.Net_Test_Project\\API.Data\\API.Data.csproj": {
+                "projectPath": "G:\\BrainStation\\Asp.Net_Test_Project\\API.Data\\API.Data.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "G:\\BrainStation\\Asp.Net_Test_Project\\API.Service\\API.Service.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "G:\\BrainStation\\Asp.Net_Test_Project\\API.Service\\API.Service.csproj",
+        "projectName": "API.Service",
+        "projectPath": "G:\\BrainStation\\Asp.Net_Test_Project\\API.Service\\API.Service.csproj",
+        "packagesPath": "C:\\Users\\Piash\\.nuget\\packages\\",
+        "outputPath": "G:\\BrainStation\\Asp.Net_Test_Project\\API.Service\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Piash\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "G:\\BrainStation\\Asp.Net_Test_Project\\API.Data\\API.Data.csproj": {
+                "projectPath": "G:\\BrainStation\\Asp.Net_Test_Project\\API.Data\\API.Data.csproj"
+              },
+              "G:\\BrainStation\\Asp.Net_Test_Project\\API.Repository\\API.Repository.csproj": {
+                "projectPath": "G:\\BrainStation\\Asp.Net_Test_Project\\API.Repository\\API.Repository.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

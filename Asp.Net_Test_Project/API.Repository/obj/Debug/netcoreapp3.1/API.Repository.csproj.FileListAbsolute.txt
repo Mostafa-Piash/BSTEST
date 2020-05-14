@@ -1,0 +1,12 @@
+G:\BrainStation\Asp.Net_Test_Project\API.Repository\bin\Debug\netcoreapp3.1\API.Repository.deps.json
+G:\BrainStation\Asp.Net_Test_Project\API.Repository\bin\Debug\netcoreapp3.1\API.Repository.dll
+G:\BrainStation\Asp.Net_Test_Project\API.Repository\bin\Debug\netcoreapp3.1\API.Repository.pdb
+G:\BrainStation\Asp.Net_Test_Project\API.Repository\bin\Debug\netcoreapp3.1\API.Data.dll
+G:\BrainStation\Asp.Net_Test_Project\API.Repository\bin\Debug\netcoreapp3.1\API.Data.pdb
+G:\BrainStation\Asp.Net_Test_Project\API.Repository\obj\Debug\netcoreapp3.1\API.Repository.csprojAssemblyReference.cache
+G:\BrainStation\Asp.Net_Test_Project\API.Repository\obj\Debug\netcoreapp3.1\API.Repository.csproj.CoreCompileInputs.cache
+G:\BrainStation\Asp.Net_Test_Project\API.Repository\obj\Debug\netcoreapp3.1\API.Repository.AssemblyInfoInputs.cache
+G:\BrainStation\Asp.Net_Test_Project\API.Repository\obj\Debug\netcoreapp3.1\API.Repository.AssemblyInfo.cs
+G:\BrainStation\Asp.Net_Test_Project\API.Repository\obj\Debug\netcoreapp3.1\API.Repository.csproj.CopyComplete
+G:\BrainStation\Asp.Net_Test_Project\API.Repository\obj\Debug\netcoreapp3.1\API.Repository.dll
+G:\BrainStation\Asp.Net_Test_Project\API.Repository\obj\Debug\netcoreapp3.1\API.Repository.pdb
