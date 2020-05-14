@@ -71,7 +71,6 @@ namespace API.Service.Concrete
                 var totalComments = await _commentService.GetCommentCount(postIds);
                 var votes = await _voteService.GetVote(comments.Select(s => s.Id).ToArray());
 
-
                 return new PostsWithCommentsAndVotesModel
                 {
                     TotalPost = totalPosts,
