@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace API.Repository.Concrete
 {
-    public class PostRepository: IPostRepository
+    public class PostRepository : IPostRepository
     {
         private readonly DatabaseContext _context;
         public PostRepository(DatabaseContext context)
@@ -63,16 +63,10 @@ namespace API.Repository.Concrete
 
         public async Task<IEnumerable<Posts>> GetAllPosts(int index, int count)
         {
-            try
-            {
-                var res = await _context.Posts.Select(s => s).Skip(index).Take(count).ToListAsync();
-                return res;
-            }
-            catch (Exception)
-            {
 
-                throw;
-            }
+            var res = await _context.Posts.Select(s => s).Skip(index).Take(count).ToListAsync();
+            return res;
+
         }
 
         public async Task<Posts> GetPost(int postId)

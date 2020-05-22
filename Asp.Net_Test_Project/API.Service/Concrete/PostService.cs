@@ -62,8 +62,7 @@ namespace API.Service.Concrete
 
         public async Task<PostsWithCommentsAndVotesModel> GetPostWithCommentsAndVotes(int postPage, int commentPage)
         {
-            try
-            {
+            
                 var posts = await _repository.GetAllPosts((postPage - 1) * 20, 20);
                 var totalPosts = await _repository.AllPostCount();
                 var postIds = posts.Select(s => s.Id).ToArray();
@@ -94,12 +93,7 @@ namespace API.Service.Concrete
                     }).ToList()
 
                 };
-            }
-            catch (Exception ex)
-            {
-
-                throw ex;
-            }
+           
 
 
 

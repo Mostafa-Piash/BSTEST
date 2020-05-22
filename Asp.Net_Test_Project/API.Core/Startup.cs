@@ -1,14 +1,19 @@
 using System.Linq;
 using System.Reflection;
 using System.Runtime.Versioning;
+using System.Text.Json;
+using API.Core.Middleware;
 using API.Data;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Newtonsoft.Json;
+
 namespace API.Core
 {
     public class Startup
@@ -32,10 +37,13 @@ namespace API.Core
                         .AllowCredentials()
                         .WithOrigins(origins);
                 }));
+
             services.AddControllers();
             services.AddDbContext<DatabaseContext>(options => options.UseSqlServer(Configuration["ConnectionString:SqlConnection"]));
             services.AddTransient(provider => Configuration);
             services.RegisterIoC(Configuration);
+            services.AddSwaggerDocument();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -45,7 +53,25 @@ namespace API.Core
             {
                 app.UseDeveloperExceptionPage();
             }
+            app.UseOpenApi();
+            app.UseSwaggerUi3();
+            app.UseResponseWrapper();
+            app.UseExceptionHandler(a => a.Run(async context =>
+            {
+                var exceptionHandlerPathFeature = context.Features.Get<IExceptionHandlerPathFeature>();
+                var exception = exceptionHandlerPathFeature.Error;
+
+                var result = JsonConvert.SerializeObject(new
+                {
+                    error = exception.Message,
+                    detail = exceptionHandlerPathFeature.Error.StackTrace
+                    
+                });
+                context.Response.ContentType = "application/json";
+                await context.Response.WriteAsync(result);
+            }));
             app.UseCors(MyAllowSpecificOrigins);
+          
             app.UseHttpsRedirection();
 
             app.UseRouting();
@@ -62,7 +88,7 @@ namespace API.Core
                 if (context.Request.Path.Value == "/")
                 {
                     string ver = Assembly.GetEntryAssembly()?.GetCustomAttribute<TargetFrameworkAttribute>()?.FrameworkName;
-                    await context.Response.WriteAsync($"{{status :'API is Running.'}} Version: {ver}");
+                    await context.Response.WriteAsync($"{{status :'API is Running.', version: '{ver}'}}");
                 }
                 else
                 {

@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30011.22
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API.Core", "API.Core\API.Core.csproj", "{2B1FBC22-5CCD-4ADC-9396-E113DA5B0388}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "API.Core", "API.Core\API.Core.csproj", "{2B1FBC22-5CCD-4ADC-9396-E113DA5B0388}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API.Data", "API.Data\API.Data.csproj", "{2EC2785C-BA4D-49AB-BE3C-6C2FB961C36C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "API.Data", "API.Data\API.Data.csproj", "{2EC2785C-BA4D-49AB-BE3C-6C2FB961C36C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API.Service", "API.Service\API.Service.csproj", "{1DB33EFD-34FF-472C-9680-4D1D93E079B7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "API.Service", "API.Service\API.Service.csproj", "{1DB33EFD-34FF-472C-9680-4D1D93E079B7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API.Repository", "API.Repository\API.Repository.csproj", "{F0EB1AE7-C4AB-4D02-B045-BD8E5A3B4A60}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "API.Repository", "API.Repository\API.Repository.csproj", "{F0EB1AE7-C4AB-4D02-B045-BD8E5A3B4A60}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
